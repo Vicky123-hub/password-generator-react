@@ -1,32 +1,22 @@
-# 🔐 Premium Password Generator
+# React Password Generator
 
-A sleek, responsive, and secure password generator web application built with **React 19** and **Vite**. This application features dynamic strength estimation, one-click copying, and fine-tuned customization settings to help users generate strong, secure passwords instantly.
+A customizable password generator built with React and Vite. It lets users generate secure, random passwords by adjusting the length and toggling options for numbers and special characters.
 
----
+## Features
 
-## ✨ Features
+- **Dynamic Generation**: Generates new passwords instantly as slider or options change.
+- **Regenerate Button**: Click the refresh button (`↻`) to quickly create a new password with the same settings.
+- **Strength Indicator**: Real-time color-coded bar (Weak, Medium, Strong) based on password complexity.
+- **One-click Copy**: Copies the generated password to your clipboard with temporary visual feedback.
+- **Modern UI**: Designed with glassmorphism, responsive layouts, and Poppins font.
 
-- **⚡ Instant Generation**: Passwords generate automatically as you adjust options or the length slider.
-- **🔄 Regenerate Button**: A quick-refresh action (`↻`) to get a new password with the same settings.
-- **📊 Real-time Strength Indicator**: Dynamic color-coded bar (Weak 🔴, Medium 🟡, Strong 🟢) analyzing complexity based on length, digits, and special characters.
-- **📋 One-Click Copy**: Copy the generated password to your clipboard with clean visual feedback.
-- **📱 Glassmorphism UI**: Beautiful, modern dashboard styling with smooth hover transitions, custom accent colors, and responsive layouts.
-- **🔡 Typography**: Styled with the premium Google Font family **Poppins**.
+## Tech Stack
 
----
+- **React 19**
+- **Vite**
+- **CSS** (Vanilla stylesheet)
 
-## 🛠️ Tech Stack
-
-- **Framework**: [React 19](https://react.dev/)
-- **Bundler & Build Tool**: [Vite](https://vite.dev/)
-- **Styling**: Modern Vanilla CSS (Glassmorphism & Flexbox)
-- **Icons / Fonts**: Poppins (Google Fonts)
-
----
-
-## 🚀 Getting Started
-
-To run this project locally on your machine, follow these steps:
+## How to Run Locally
 
 ### 1. Clone the repository
 ```bash
@@ -39,38 +29,28 @@ cd password-generator-react
 npm install
 ```
 
-### 3. Start the development server
+### 3. Run the development server
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
 
 ### 4. Build for production
 ```bash
 npm run build
 ```
-This generates a production-ready compiled bundle in the `dist/` directory.
 
----
-
-## 📁 Project Structure
+## Project Directory Structure
 
 ```text
 password-generator/
-├── public/                 # Static assets (favicons, icons)
+├── public/                 # Static assets
 ├── src/
-│   ├── assets/             # Images and SVG resources
-│   ├── App.css             # Main styling, variables, animations
-│   ├── App.jsx             # Core application logic & components
+│   ├── assets/             # SVGs and images
+│   ├── App.css             # Main stylesheet (styles and animations)
+│   ├── App.jsx             # App component and generation logic
 │   ├── index.css           # Global resets
-│   └── main.jsx            # React root mount point
-├── index.html              # HTML entry point with Google Fonts
-├── package.json            # Scripts & project dependencies
-└── vite.config.js          # Vite configuration
+│   └── main.jsx            # Entry point
+├── index.html              # HTML shell
+├── package.json            # Scripts & dependencies
+└── vite.config.js          # Vite config
 ```
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
