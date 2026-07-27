@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --left-background:#302F4D;
+    --right-background:#120D31;
+    --password-panel:#8A84E2;
+    --text:#F7E1D7;
+    --other:#DEDBD2;
+    --copy-button-range:#F15025;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+.background{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(
+        120deg,
+        var(--left-background),
+        var(--right-background)
+    );
+    padding:30px;
+}
+
+.info{
+    color:var(--text);
+    font-size:2.5rem;
+    font-weight:700;
+    margin-bottom:30px;
+    letter-spacing:2px;
+}
+
+.panel{
+    width:500px;
+    background:rgba(138,132,226,.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.passwordBox{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.passwordInput{
+    flex:1;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding:0 18px;
+    font-size:18px;
+    background:#ffffff;
+}
+
+.button{
+    width:100px;
+    border:none;
+    border-radius:12px;
+    background:var(--copy-button-range);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(241,80,37,.4);
+}
+
+.feature{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.length{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.length label{
+    color:var(--text);
+    font-weight:600;
+}
+
+#rangeOfLength{
+    width:100%;
+    margin-top:10px;
+    accent-color:var(--copy-button-range);
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.option input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:var(--copy-button-range);
+    cursor:pointer;
+}
+
+.option label{
+    color:var(--text);
+    font-size:16px;
+    cursor:pointer;
+}
+
+.regenerateButton {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.regenerateButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(60deg) scale(1.05);
+}
+
+.regenerateButton:active {
+    transform: rotate(180deg) scale(0.9);
+}
+
+.strengthContainer {
+    margin-top: -15px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: fadeIn 0.3s ease;
+}
+
+.strengthInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--other);
+}
+
+.strengthLabel {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.strengthBarBg {
+    height: 6px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.strengthBar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
